@@ -43,5 +43,26 @@ const buttons = document.querySelectorAll('.btn')
 buttons.forEach(button=>{
     button.addEventListener('click',()=>{
         button.textContent='This Button actually does nothing'
-    })
-})
+    });
+});
+
+const body = document.querySelector('body')
+
+body.addEventListener('click',()=>{
+    body.style.backgroundColor="purple"
+});
+
+const topContainer = document.querySelector('.intro')
+
+topContainer.addEventListener('click',()=>{
+    topContainer.style.backgroundColor='red';
+});
+
+const textContainers = document.querySelectorAll('.text-content')
+
+textContainers.forEach(container=>{
+    container.addEventListener('click',()=>{
+        container.style.backgroundColor='yellow';
+    });
+});
+
