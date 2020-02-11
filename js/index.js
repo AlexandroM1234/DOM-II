@@ -46,12 +46,6 @@ buttons.forEach(button=>{
     });
 });
 
-const body = document.querySelector('body')
-
-body.addEventListener('click',()=>{
-    body.style.backgroundColor="purple"
-});
-
 const topContainer = document.querySelector('.intro')
 
 topContainer.addEventListener('click',()=>{
@@ -66,3 +60,23 @@ textContainers.forEach(container=>{
     });
 });
 
+const destinationText=document.querySelector('.content-destination')
+
+destinationText.addEventListener('click',()=>{
+    destinationText.style.backgroundColor='orange'
+})
+
+const triText = document.querySelectorAll('.destination')
+
+triText.forEach(section=>{
+    section.addEventListener('click',()=>{
+        section.style.backgroundColor='pink';
+        event.stopPropagation();
+    })
+})
+
+const footerGone= document.querySelector('.footer')
+
+footerGone.addEventListener('dblclick',()=>{
+    footerGone.remove();
+})
